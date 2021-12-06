@@ -38,9 +38,9 @@
 
 /* Begin PBXFileReference section */
 		0519AB117D2327EE62AB8619 /* Pods-KYAttributeText_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KYAttributeText_Example.debug.xcconfig"; path = "Target Support Files/Pods-KYAttributeText_Example/Pods-KYAttributeText_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		10C46C705A19FB365269C026 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		10C46C705A19FB365269C026 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		346B42304C1D534187C2BFAA /* Pods-KYAttributeText_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KYAttributeText_Example.release.xcconfig"; path = "Target Support Files/Pods-KYAttributeText_Example/Pods-KYAttributeText_Example.release.xcconfig"; sourceTree = "<group>"; };
-		47759FF886F4B496A68E12E2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		47759FF886F4B496A68E12E2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		58B5804B06CDD164721970F7 /* Pods_KYAttributeText_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KYAttributeText_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59B08105275720A5D334D612 /* Pods-KYAttributeText_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KYAttributeText_Tests.debug.xcconfig"; path = "Target Support Files/Pods-KYAttributeText_Tests/Pods-KYAttributeText_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* KYAttributeText_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KYAttributeText_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +66,7 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73E97937E8AFF9FD38DB16B4 /* Pods-KYAttributeText_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KYAttributeText_Tests.release.xcconfig"; path = "Target Support Files/Pods-KYAttributeText_Tests/Pods-KYAttributeText_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F3E2F2F117391FC82A30609E /* KYAttributeText.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = KYAttributeText.podspec; path = ../KYAttributeText.podspec; sourceTree = "<group>"; };
+		F3E2F2F117391FC82A30609E /* KYAttributeText.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KYAttributeText.podspec; path = ../KYAttributeText.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +193,6 @@
 				59B08105275720A5D334D612 /* Pods-KYAttributeText_Tests.debug.xcconfig */,
 				73E97937E8AFF9FD38DB16B4 /* Pods-KYAttributeText_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +257,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

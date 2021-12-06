@@ -1,0 +1,6 @@
+framework module KYAttributeText {
+  umbrella header "KYAttributeText-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,16 @@
+PODS:
+  - KYAttributeText (0.1.0)
+
+DEPENDENCIES:
+  - KYAttributeText (from `../`)
+
+EXTERNAL SOURCES:
+  KYAttributeText:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  KYAttributeText: 9be810097cf73453ea64d246c35fd1e348151963
+
+PODFILE CHECKSUM: 5003d775e5281f539167f9eceb8c832d598d3062
+
+COCOAPODS: 1.11.0
