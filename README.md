@@ -8,14 +8,17 @@
 ## Example
 
 使用方式一：
+```
     NSMutableAttributedString.ky_getInstance(@"这是一个首行缩进的效果")
     .ky_firstLineHeadIndent(@30)
     .ky_foregroundColorAttributeName([UIColor whiteColor])
     .ky_fontAttributeName([UIFont systemFontOfSize:30])
     .ky_underlineColorAttributeName([UIColor greenColor])
     .ky_underlineStyleAttributeName(@2);
+```
 
 使用方式二：
+```
     NSMutableAttributedString *bodyAtt = [NSMutableAttributedString ky_getInstance:@"窗前明月光\n" addAttribute:^(NSMutableAttributedString * _Nonnull attributedString) {
         attributedString.ky_foregroundColorAttributeName([UIColor greenColor]);
         attributedString.ky_fontAttributeName([UIFont systemFontOfSize:16]);
@@ -28,6 +31,7 @@
         .ky_fontAttributeName([UIFont systemFontOfSize:FONTSIZE_BODY]);
     }])
     .ky_paragraphStyleAttributeName(style);
+```
 
 ## Requirements
 

@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
                         针对原生富文本使用不方便，根据点语言进行了封装。简化富文本的创建和排版
                        DESC
 
-  s.homepage         = 'https://gitee.com/kangpp/kyattribute-text'
+  s.homepage         = 'https://github.com/kangpengpeng/KYAttributeText'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'kangpengpeng' => '353327533@qq.com' }
-  s.source           = { :git => 'https://gitee.com/kangpp/kyattribute-text.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/kangpengpeng/KYAttributeText.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
