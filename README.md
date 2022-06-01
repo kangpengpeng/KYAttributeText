@@ -7,7 +7,27 @@
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+使用方式一：
+    NSMutableAttributedString.ky_getInstance(@"这是一个首行缩进的效果")
+    .ky_firstLineHeadIndent(@30)
+    .ky_foregroundColorAttributeName([UIColor whiteColor])
+    .ky_fontAttributeName([UIFont systemFontOfSize:30])
+    .ky_underlineColorAttributeName([UIColor greenColor])
+    .ky_underlineStyleAttributeName(@2);
+
+使用方式二：
+    NSMutableAttributedString *bodyAtt = [NSMutableAttributedString ky_getInstance:@"窗前明月光\n" addAttribute:^(NSMutableAttributedString * _Nonnull attributedString) {
+        attributedString.ky_foregroundColorAttributeName([UIColor greenColor]);
+        attributedString.ky_fontAttributeName([UIFont systemFontOfSize:16]);
+    }]
+    .ky_appendAttributedString([NSMutableAttributedString ky_getInstance:@"疑似地上霜\n" addAttribute:^(NSMutableAttributedString * _Nonnull attributedString) {
+    attributedString
+        .ky_underlineColorAttributeName([UIColor greenColor])
+        .ky_underlineStyleAttributeName(@2)
+        .ky_foregroundColorAttributeName([UIColor whiteColor])
+        .ky_fontAttributeName([UIFont systemFontOfSize:FONTSIZE_BODY]);
+    }])
+    .ky_paragraphStyleAttributeName(style);
 
 ## Requirements
 
@@ -17,12 +37,12 @@ KYAttributeText is available through [CocoaPods](https://cocoapods.org). To inst
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'KYAttributeText'
+pod 'KYAttributeText', '~> 0.1.0'
 ```
 
 ## Author
 
-kangpengpeng, 353327533@qq.com
+kangpengpeng, 353327533@qq.com, kangpp@163.com
 
 ## License
 

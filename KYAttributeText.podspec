@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KYAttributeText'
-  s.version          = '0.0.1'
+  s.version          = '0.1.0'
   s.summary          = '富文本封装'
 
 # This description is used to generate tags and improve search results.

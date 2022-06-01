@@ -19,7 +19,7 @@
     addBlock(weakAbsString);
     return weakAbsString;
 }
-/// 初始化 (NSString)
+/// 初始化
 + (NSMutableAttributedString * _Nonnull (^)(NSString * _Nonnull string))ky_getInstance {
     __weak typeof(self) weakSelf = self;
     return ^id(NSString * _Nonnull string) {
@@ -28,7 +28,7 @@
     };
 }
 
-/// 添加文本格式 (value, NSAttributedStringKey)
+/// 添加文本格式
 - (NSMutableAttributedString * _Nonnull (^)(id _Nonnull, NSAttributedStringKey _Nonnull))ky_addAttributedValueForKey {
     __weak typeof(self) weakSelf = self;
     return ^id(id value, NSAttributedStringKey key) {
@@ -39,8 +39,7 @@
         return strongSelf;
     };
 }
-
-/// 拼接富文本 (NSMutableAttributedString)
+/// 拼接富文本
 - (NSMutableAttributedString * _Nonnull (^)(NSMutableAttributedString * _Nonnull))ky_appendAttributedString {
     __weak typeof(self) weakSelf = self;
     return ^id(NSMutableAttributedString *attributedString) {
@@ -52,7 +51,6 @@
     };
 }
 
-/// 拼接图文混排文本 (NSTextAttachment)
 - (NSMutableAttributedString * _Nonnull (^)(NSTextAttachment * _Nonnull))ky_appendTextAttachment {
     __weak typeof(self) weakSelf = self;
     return ^id(NSTextAttachment *textAttachment) {
@@ -66,7 +64,7 @@
     };
 }
 
-/// 文本字体 (UIFont)
+/// 文本字体
 - (NSMutableAttributedString * _Nonnull (^)(id _Nonnull))ky_fontAttributeName {
     __weak typeof(self) weakSelf = self;
     return ^id(id value) {
@@ -77,19 +75,7 @@
         return strongSelf.ky_addAttributedValueForKey(value, NSFontAttributeName);
     };
 }
-- (NSMutableAttributedString * _Nonnull (^)(id _Nonnull))ky_firstLineHeadIndent {
-    __weak typeof(self) weakSelf = self;
-    return ^id(id value) {
-        __strong typeof(weakSelf) strongSelf = weakSelf;
-        if (![value isKindOfClass:NSNumber.class]) {
-            return strongSelf;
-        }
-        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-        paragraphStyle.firstLineHeadIndent = [(NSNumber *)value floatValue];//首行缩进
-        return strongSelf.ky_addAttributedValueForKey(paragraphStyle, NSParagraphStyleAttributeName);
-    };
-}
-/// 段落风格-首行、行间距、段落 (NSParagraphStyle)
+/// 段落风格（首行、行间距、段落）
 - (NSMutableAttributedString * _Nonnull (^)(id _Nonnull))ky_paragraphStyleAttributeName {
     __weak typeof(self) weakSelf = self;
     return ^id(id value) {
@@ -100,7 +86,7 @@
         return strongSelf.ky_addAttributedValueForKey(value, NSParagraphStyleAttributeName);
     };
 }
-/// 文本颜色 (UIColor)
+/// 文本颜色
 - (NSMutableAttributedString * _Nonnull (^)(id _Nonnull))ky_foregroundColorAttributeName {
     __weak typeof(self) weakSelf = self;
     return ^id(id value) {
@@ -112,7 +98,7 @@
     };
 }
 
-/// 文本背景色 (UIColor)
+/// 文本背景色
 - (NSMutableAttributedString * _Nonnull (^)(id _Nonnull))ky_backgroundColorAttributeName {
     __weak typeof(self) weakSelf = self;
     return ^id(id value) {
@@ -124,7 +110,7 @@
     };
 }
 
-/// 文本连体 (NSNumber)
+/// 文本连体
 - (NSMutableAttributedString * _Nonnull (^)(id _Nonnull))ky_ligatureAttributeName {
     __weak typeof(self) weakSelf = self;
     return ^id(id value) {
@@ -135,7 +121,7 @@
         return strongSelf.ky_addAttributedValueForKey(value, NSLigatureAttributeName);
     };
 }
-/// 字符间隔，文本间距 (NSNumber)
+/// 字符间隔，文本间距
 - (NSMutableAttributedString * _Nonnull (^)(id _Nonnull))ky_kernAttributeName {
     __weak typeof(self) weakSelf = self;
     return ^id(id value) {
@@ -146,7 +132,7 @@
         return strongSelf.ky_addAttributedValueForKey(value, NSKernAttributeName);
     };
 }
-/// 字符间隔（效果同上）(NSNumber)
+/// 字符间隔（效果同上）
 - (NSMutableAttributedString * _Nonnull (^)(id _Nonnull))ky_trackingAttributeName {
     __weak typeof(self) weakSelf = self;
     return ^id(id value) {
@@ -157,7 +143,7 @@
         return strongSelf.ky_addAttributedValueForKey(value, NSTrackingAttributeName);
     };
 }
-/// 删除线 (NSNumber)
+/// 删除线
 - (NSMutableAttributedString * _Nonnull (^)(id _Nonnull))ky_strikethroughStyleAttributeName {
     __weak typeof(self) weakSelf = self;
     return ^id(id value) {
@@ -168,7 +154,7 @@
         return strongSelf.ky_addAttributedValueForKey(value, NSStrikethroughStyleAttributeName);
     };
 }
-/// 下划线 (NSNumber)
+/// 下划线
 - (NSMutableAttributedString * _Nonnull (^)(id _Nonnull))ky_underlineStyleAttributeName {
     __weak typeof(self) weakSelf = self;
     return ^id(id value) {
@@ -179,7 +165,7 @@
         return strongSelf.ky_addAttributedValueForKey(value, NSUnderlineStyleAttributeName);
     };
 }
-/// 文本描边颜色 (UIColor)
+/// 文本描边颜色
 - (NSMutableAttributedString * _Nonnull (^)(id _Nonnull))ky_strokeColorAttributeName {
     __weak typeof(self) weakSelf = self;
     return ^id(id value) {
@@ -190,9 +176,6 @@
         return strongSelf.ky_addAttributedValueForKey(value, NSStrokeColorAttributeName);
     };
 }
-
-/// 设置文本描边宽度（正值描边效果，负值镂空效果）
-/// (NSNumber)
 - (NSMutableAttributedString * _Nonnull (^)(id _Nonnull))ky_strokeWidthAttributeName {
     __weak typeof(self) weakSelf = self;
     return ^id(id value) {
@@ -203,10 +186,6 @@
         return strongSelf.ky_addAttributedValueForKey(value, NSStrokeWidthAttributeName);
     };
 }
-
-/// 设置文本阴影
-/// value是NSShadow对象，如果设置了其他属性，如删除线、下划线等，会一并产生阴影效果
-/// (NSShadow)
 - (NSMutableAttributedString * _Nonnull (^)(id _Nonnull))ky_shadowAttributeName {
     __weak typeof(self) weakSelf = self;
     return ^id(id value) {
@@ -217,8 +196,6 @@
         return strongSelf.ky_addAttributedValueForKey(value, NSShadowAttributeName);
     };
 }
-/// 设置图版印刷效果（仅有 NSTextEffectLetterpressStyle 一种类型可设置）
-/// (NSTextEffectLetterpressStyle)
 - (NSMutableAttributedString * _Nonnull (^)(id _Nonnull))ky_textEffectAttributeName {
     __weak typeof(self) weakSelf = self;
     return ^id(id value) {
@@ -230,7 +207,6 @@
     };
 }
 /// 超链接
-/// (NSURL)
 - (NSMutableAttributedString * _Nonnull (^)(id _Nonnull))ky_linkAttributeName {
     __weak typeof(self) weakSelf = self;
     return ^id(id value) {
@@ -242,7 +218,6 @@
     };
 }
 /// 偏移量
-/// (NSNumber)
 - (NSMutableAttributedString * _Nonnull (^)(id _Nonnull))ky_baselineOffsetAttributeName {
     __weak typeof(self) weakSelf = self;
     return ^id(id value) {
@@ -254,7 +229,6 @@
     };
 }
 /// 下划线颜色
-/// (UIColor)
 - (NSMutableAttributedString * _Nonnull (^)(id _Nonnull))ky_underlineColorAttributeName {
     __weak typeof(self) weakSelf = self;
     return ^id(id value) {
@@ -266,7 +240,6 @@
     };
 }
 /// 删除线颜色
-/// (UIColor)
 - (NSMutableAttributedString * _Nonnull (^)(id _Nonnull))ky_strikethroughColorAttributeName {
     __weak typeof(self) weakSelf = self;
     return ^id(id value) {
@@ -278,7 +251,6 @@
     };
 }
 /// 字体倾斜，正值右倾，负值左倾
-/// (NSNumber)
 - (NSMutableAttributedString * _Nonnull (^)(id _Nonnull))ky_obliquenessAttributeName {
     __weak typeof(self) weakSelf = self;
     return ^id(id value) {
@@ -291,7 +263,6 @@
 }
 
 /// 字体横向拉伸
-/// (NSNumber)
 - (NSMutableAttributedString * _Nonnull (^)(id _Nonnull))ky_expansionAttributeName {
     __weak typeof(self) weakSelf = self;
     return ^id(id value) {
@@ -304,7 +275,6 @@
 }
 
 /// 文本书写方向
-/// (NSNumber)
 - (NSMutableAttributedString * _Nonnull (^)(id _Nonnull))ky_writingDirectionAttributeName {
     __weak typeof(self) weakSelf = self;
     return ^id(id value) {
@@ -331,7 +301,6 @@
 }
 
 /// 排版方向
-/// (NSNumber)
 - (NSMutableAttributedString * _Nonnull (^)(id _Nonnull))ky_verticalGlyphFormAttributeName {
     __weak typeof(self) weakSelf = self;
     return ^id(id value) {

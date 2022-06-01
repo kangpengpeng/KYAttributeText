@@ -1,9 +1,9 @@
 {
   "name": "KYAttributeText",
   "version": "0.1.0",
-  "summary": "A short description of KYAttributeText.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/kangpengpeng/KYAttributeText",
+  "summary": "富文本封装",
+  "description": "针对原生富文本使用不方便，根据点语言进行了封装。简化富文本的创建和排版",
+  "homepage": "https://gitee.com/kangpp/kyattribute-text",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "kangpengpeng": "353327533@qq.com"
   },
   "source": {
-    "git": "https://github.com/kangpengpeng/KYAttributeText.git",
+    "git": "https://gitee.com/kangpp/kyattribute-text.git",
     "tag": "0.1.0"
   },
   "platforms": {
